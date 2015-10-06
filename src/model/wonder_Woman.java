@@ -11,12 +11,12 @@ import java.io.Serializable;
  *
  * @author Josch
  */
-public class Batman implements Serializable {
+public class wonder_Woman implements Serializable {
     
     private int hitPoints;
     private int damage;
 
-    public Batman() {
+    public wonder_Woman() {
     }
     
 
@@ -36,9 +36,8 @@ public class Batman implements Serializable {
         this.damage = damage;
     }
     
-    public void applydamage(int damage){
-        this.hitPoints -= damage;
-    }
+    public void applyDamage(int damage){
+    this.hitPoints -= damage;
     
-    
+}
 }

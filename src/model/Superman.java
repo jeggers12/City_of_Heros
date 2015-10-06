@@ -31,7 +31,7 @@ public class Superman {
     }
 
     public void setDamage(int damage) {
-        this.damage = damage;
+        this.hitPoints -= damage;
     }
     
     
