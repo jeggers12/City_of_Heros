@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package SuperHeros;
 
 /**
  *
  * @author Josch
  */
-public class Iceman {
+public class Superman {
     
     private int hitPoints;
     private int damage;
 
-    public Iceman() {
+    public Superman() {
     }
     
 
@@ -31,11 +31,8 @@ public class Iceman {
     }
 
     public void setDamage(int damage) {
-        this.damage = damage;
-    }
-    
-    public void applydamage(int damage){
         this.hitPoints -= damage;
     }
+    
     
 }
