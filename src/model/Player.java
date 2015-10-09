@@ -6,6 +6,8 @@
 package model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -14,6 +16,14 @@ import java.io.Serializable;
 public class Player implements Serializable {
     
     private String name;
+    private List<Item> items;
+
+    public Player() {
+        
+        items = new ArrayList<Item>();
+    }
+    
+    
 
     public String getName() {
         return name;
@@ -22,5 +32,14 @@ public class Player implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
+    }
    
+    
 }
