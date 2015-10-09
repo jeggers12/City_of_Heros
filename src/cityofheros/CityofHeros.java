@@ -5,6 +5,8 @@
  */
 package cityofheros;
 
+import model.Map;
+
 /**
  *
  * @author Josch
@@ -15,7 +17,12 @@ public class CityofHeros {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        
+        Map map = new Map();
+        map.initialize();
+        
+        System.out.println(map.toString());
     }
     
 }

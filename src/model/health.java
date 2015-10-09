@@ -5,10 +5,16 @@
  */
 package model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Josch
  */
-public class health {
+public class health implements Serializable {
+
+    public health() {
+    
+    }
     
 }
