@@ -4,24 +4,15 @@
  * and open the template in the editor.
  */
 package model;
-
 import java.io.Serializable;
-
 /**
  *
  * @author Josch
  */
-public class health extends Item implements Serializable {
+public class Glove extends Item implements Serializable {
     
-    public health() {
+    public Glove() {
         super();
     }
-
-    
-
-   
-
-    
-    
     
 }

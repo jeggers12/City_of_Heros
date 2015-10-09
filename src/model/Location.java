@@ -115,7 +115,7 @@ public class Location implements Serializable {
     //METHODS
     /////////////////////////
     
-    public boolean hasthug() {
+    public boolean hasthugs() {
         
         return thugs != null;
     }

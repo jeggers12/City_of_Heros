@@ -16,6 +16,7 @@ import java.util.List;
 public class Player implements Serializable {
     
     private String name;
+    private int hitPoints;
     private List<Item> items;
 
     public Player() {
@@ -41,5 +42,8 @@ public class Player implements Serializable {
         this.items = items;
     }
    
+    public void applyDamage(int damage) {
+        this.hitPoints = this.hitPoints - damage;
     
+}
 }
