@@ -41,6 +41,37 @@ public class Thugs {
     void sethitPoints(int i) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 37 * hash + this.hitPoints;
+        hash = 37 * hash + this.damage;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Thugs other = (Thugs) obj;
+        if (this.hitPoints != other.hitPoints) {
+            return false;
+        }
+        if (this.damage != other.damage) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Thugs{" + "hitPoints=" + hitPoints + ", damage=" + damage + '}';
+    }
     
     
     

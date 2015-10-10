@@ -33,6 +33,37 @@ public class Superman {
     public void setDamage(int damage) {
         this.hitPoints -= damage;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 11 * hash + this.hitPoints;
+        hash = 11 * hash + this.damage;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Superman other = (Superman) obj;
+        if (this.hitPoints != other.hitPoints) {
+            return false;
+        }
+        if (this.damage != other.damage) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Superman{" + "hitPoints=" + hitPoints + ", damage=" + damage + '}';
+    }
     
     
 }

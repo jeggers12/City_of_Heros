@@ -6,6 +6,7 @@
 package model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  *
@@ -48,6 +49,37 @@ public boolean isHealth() {
     
     public boolean isWeapon() {
         return this instanceof Glove;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 79 * hash + Objects.hashCode(this.name);
+        hash = 79 * hash + this.hitPoints;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Item other = (Item) obj;
+        if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
+        if (this.hitPoints != other.hitPoints) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" + "name=" + name + ", hitPoints=" + hitPoints + '}';
     }
 
    

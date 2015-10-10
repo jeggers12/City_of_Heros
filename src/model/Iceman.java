@@ -37,5 +37,37 @@ public class Iceman {
     public void applydamage(int damage){
         this.hitPoints -= damage;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 17 * hash + this.hitPoints;
+        hash = 17 * hash + this.damage;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Iceman other = (Iceman) obj;
+        if (this.hitPoints != other.hitPoints) {
+            return false;
+        }
+        if (this.damage != other.damage) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Iceman{" + "hitPoints=" + hitPoints + ", damage=" + damage + '}';
+    }
+    
     
 }

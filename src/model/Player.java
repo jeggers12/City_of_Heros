@@ -8,6 +8,7 @@ package model;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  *
@@ -46,4 +47,40 @@ public class Player implements Serializable {
         this.hitPoints = this.hitPoints - damage;
     
 }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 67 * hash + Objects.hashCode(this.name);
+        hash = 67 * hash + this.hitPoints;
+        hash = 67 * hash + Objects.hashCode(this.items);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Player other = (Player) obj;
+        if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
+        if (this.hitPoints != other.hitPoints) {
+            return false;
+        }
+        if (!Objects.equals(this.items, other.items)) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Player{" + "name=" + name + ", hitPoints=" + hitPoints + ", items=" + items + '}';
+    }
+    
 }

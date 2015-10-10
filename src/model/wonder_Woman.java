@@ -40,4 +40,36 @@ public class wonder_Woman implements Serializable {
     this.hitPoints -= damage;
     
 }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 37 * hash + this.hitPoints;
+        hash = 37 * hash + this.damage;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final wonder_Woman other = (wonder_Woman) obj;
+        if (this.hitPoints != other.hitPoints) {
+            return false;
+        }
+        if (this.damage != other.damage) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "wonder_Woman{" + "hitPoints=" + hitPoints + ", damage=" + damage + '}';
+    }
+    
 }
