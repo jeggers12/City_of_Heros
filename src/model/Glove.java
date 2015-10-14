@@ -11,8 +11,40 @@ import java.io.Serializable;
  */
 public class Glove extends Item implements Serializable {
     
+    String name;
+    int hitPoints;
     public Glove() {
         super();
+    }
+
+    @Override
+    public String getName() {
+        
+        return name;
+        
+        
+    }
+
+    @Override
+    public void setName(String name) {
+        
+        this.name = name;
+        
+    }
+
+    @Override
+    public int gethitPoints() {
+        
+        return hitPoints;
+        
+        
+    }
+
+    public void sethitPoints() {
+        
+        this.hitPoints = hitPoints;
+        
+        
     }
     
 }
