@@ -29,6 +29,7 @@ public class Battle_Royal {
         return false;
         
         }
+    }
         
         public boolean attackPlayer(Player p, Thug a) {
         
