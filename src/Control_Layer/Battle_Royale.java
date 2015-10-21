@@ -14,7 +14,7 @@ import model.Thug;
  *@return true if the thug is defeated, false if not defeated
  * @author Josch
  */
-public class Battle_Royal {
+public class Battle_Royale {
     
     public boolean attackThug(Player p, Thug a) {
         
