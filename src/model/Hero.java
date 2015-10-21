@@ -5,20 +5,17 @@
  */
 package model;
 
-import java.io.Serializable;
-
 /**
  *
  * @author Josch
  */
-public class Batman implements Serializable {
+public class Hero {
     
-    private int hitPoints;
+     private int hitPoints;
     private int damage;
 
-    public Batman() {
+    public Hero() {
     }
-    
 
     public int getHitPoints() {
         return hitPoints;
@@ -35,16 +32,12 @@ public class Batman implements Serializable {
     public void setDamage(int damage) {
         this.damage = damage;
     }
-    
-    public void applydamage(int damage){
-        this.hitPoints -= damage;
-    }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 31 * hash + this.hitPoints;
-        hash = 31 * hash + this.damage;
+        int hash = 7;
+        hash = 13 * hash + this.hitPoints;
+        hash = 13 * hash + this.damage;
         return hash;
     }
 
@@ -56,7 +49,7 @@ public class Batman implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Batman other = (Batman) obj;
+        final Hero other = (Hero) obj;
         if (this.hitPoints != other.hitPoints) {
             return false;
         }
@@ -68,8 +61,9 @@ public class Batman implements Serializable {
 
     @Override
     public String toString() {
-        return "Batman{" + "hitPoints=" + hitPoints + ", damage=" + damage + '}';
+        return "Hero{" + "hitPoints=" + hitPoints + ", damage=" + damage + '}';
     }
+    
     
     
 }

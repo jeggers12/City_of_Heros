@@ -9,13 +9,17 @@ package model;
  *
  * @author Josch
  */
-public class Superman {
+public class Thug {
+    
+    public static final int Max_Thug_Damage = 9;
+    public static final int Max_Thug_hitPoints = 29;
     
     private int hitPoints;
     private int damage;
 
-    public Superman() {
+    public Thug() {
     }
+    
     
 
     public int getHitPoints() {
@@ -31,14 +35,18 @@ public class Superman {
     }
 
     public void setDamage(int damage) {
-        this.hitPoints -= damage;
+        this.damage = damage;
+    }
+
+    void sethitPoints(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 11 * hash + this.hitPoints;
-        hash = 11 * hash + this.damage;
+        hash = 37 * hash + this.hitPoints;
+        hash = 37 * hash + this.damage;
         return hash;
     }
 
@@ -50,7 +58,7 @@ public class Superman {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Superman other = (Superman) obj;
+        final Thug other = (Thug) obj;
         if (this.hitPoints != other.hitPoints) {
             return false;
         }
@@ -62,8 +70,9 @@ public class Superman {
 
     @Override
     public String toString() {
-        return "Superman{" + "hitPoints=" + hitPoints + ", damage=" + damage + '}';
+        return "Thugs{" + "hitPoints=" + hitPoints + ", damage=" + damage + '}';
     }
+    
     
     
 }

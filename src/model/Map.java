@@ -41,11 +41,11 @@ public class Map implements Serializable {
                 if(matrix[row][col] == null) {
                     rtn += "x  ";
                 }
-                if(matrix[row][col].hasItem() && matrix[row][col].hasthugs()) {
+                if(matrix[row][col].hasItem() && matrix[row][col].hasthug()) {
                     rtn += "T ";
                 } else if (matrix[row][col].hasItem()) {
                     rtn += "i  ";
-                } else if (matrix[row][col].hasthugs()) {
+                } else if (matrix[row][col].hasthug()) {
                     rtn += "H  ";
                 } else {
                     rtn += "X  ";   
@@ -58,7 +58,7 @@ public class Map implements Serializable {
     }
     
     public void initialize() {
-        int numThugs = 40;
+        int numThug = 40;
         int numItems = 20;
         
         for(int row = 0; row < NUM_ROWS; row++) {
@@ -67,12 +67,12 @@ public class Map implements Serializable {
                 move.setCol(col);
                 move.setRow(row);
                 
-                if(Math.random() > 0.5 && numThugs > 0) {
-                    Thugs a = new Thugs();
-                    a.setDamage((int)(Math.random() * Thugs.Max_Thugs_Damage));
-                    a.setHitPoints((int)(Math.random() * Thugs.Max_Thugs_hitPoints));
-                    move.setThugs(a);
-                    numThugs--;
+                if(Math.random() > 0.5 && numThug > 0) {
+                    Thug a = new Thug();
+                    a.setDamage((int)(Math.random() * Thug.Max_Thug_Damage));
+                    a.setHitPoints((int)(Math.random() * Thug.Max_Thug_hitPoints));
+                    move.setThug(a);
+                    numThug--;
                 }
                 
                 if(Math.random() > 0.8 && numItems > 0) {

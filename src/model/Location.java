@@ -15,7 +15,7 @@ import java.util.Objects;
 public class Location implements Serializable {
     
     
-    private Thugs thugs;
+    private Thug thug;
     private Item item;
     private int row;
     private int col;
@@ -24,12 +24,12 @@ public class Location implements Serializable {
     public Location() {
     }
 
-    public Thugs getThugs() {
-        return thugs;
+    public Thug getThug() {
+        return thug;
     }
 
-    public void setThugs(Thugs thugs) {
-        this.thugs = thugs;
+    public void setThug(Thug thug) {
+        this.thug = thug;
     }
 
     public Item getItem() {
@@ -67,7 +67,7 @@ public class Location implements Serializable {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.thugs);
+        hash = 97 * hash + Objects.hashCode(this.thug);
         hash = 97 * hash + Objects.hashCode(this.item);
         hash = 97 * hash + this.row;
         hash = 97 * hash + this.col;
@@ -84,7 +84,7 @@ public class Location implements Serializable {
             return false;
         }
         final Location other = (Location) obj;
-        if (!Objects.equals(this.thugs, other.thugs)) {
+        if (!Objects.equals(this.thug, other.thug)) {
             return false;
         }
         if (!Objects.equals(this.item, other.item)) {
@@ -104,7 +104,7 @@ public class Location implements Serializable {
 
     @Override
     public String toString() {
-        return "Location{" + "thugs=" + thugs + ", item=" + item + ", row=" + row + ", col=" + col + ", exitLocation=" + exitLocation + '}';
+        return "Location{" + "thug=" + thug + ", item=" + item + ", row=" + row + ", col=" + col + ", exitLocation=" + exitLocation + '}';
     }
     
     
@@ -115,9 +115,9 @@ public class Location implements Serializable {
     //METHODS
     /////////////////////////
     
-    public boolean hasthugs() {
+    public boolean hasthug() {
         
-        return thugs != null;
+        return thug != null;
     }
     
     public boolean hasItem() {
