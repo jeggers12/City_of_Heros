@@ -16,6 +16,9 @@ import java.util.Objects;
  */
 public class Player implements Serializable {
     
+    public static final int Max_Damage = 9;
+   
+    
     private String name;
     private int hitPoints;
     private List<Item> items;
@@ -47,6 +50,16 @@ public class Player implements Serializable {
         this.hitPoints = this.hitPoints - damage;
     
 }
+
+    public int getHitPoints() {
+        return hitPoints;
+    }
+
+    public void setHitPoints(int hitPoints) {
+        this.hitPoints = hitPoints;
+    }
+    
+    
 
     @Override
     public int hashCode() {
@@ -82,5 +95,7 @@ public class Player implements Serializable {
     public String toString() {
         return "Player{" + "name=" + name + ", hitPoints=" + hitPoints + ", items=" + items + '}';
     }
+
+    
     
 }
