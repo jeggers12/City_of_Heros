@@ -5,13 +5,17 @@
  */
 package Control_Layer;
 
+import model.Location;
+import model.Item;
+
+        
 /**
  *
  * @author KyleSchmitt
  */
 public class MovementController {
     
-    public void movePlayerToLocation(){
+    public void movePlayerToLocation(int col, int row){
         
     }
     
