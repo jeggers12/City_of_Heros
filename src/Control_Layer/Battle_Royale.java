@@ -11,7 +11,7 @@ import model.Thug;
 /**
  * @param p The Player
  * @param a The Thug
- *@return true if the thug is defeated, false if not defeated
+ * @return true if the thug is defeated, false if not defeated
  * @author Josch
  */
 public class Battle_Royale {
