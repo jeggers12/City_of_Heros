@@ -38,9 +38,7 @@ public class Thug {
         this.damage = damage;
     }
 
-    void sethitPoints(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
     @Override
     public int hashCode() {
@@ -71,6 +69,10 @@ public class Thug {
     @Override
     public String toString() {
         return "Thugs{" + "hitPoints=" + hitPoints + ", damage=" + damage + '}';
+    }
+
+    public void sethitPoints() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
