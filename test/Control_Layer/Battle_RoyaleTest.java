@@ -64,7 +64,7 @@ public class Battle_RoyaleTest {
         System.out.println("attackPlayer");
         Player p = new Player();
         Thug a = new Thug();
-        p.setHitPoints(100);
+        p.setHitPoints(30);
         Battle_Royale instance = new Battle_Royale();
         boolean expResult = false;
         boolean result = instance.attackPlayer(p, a);
