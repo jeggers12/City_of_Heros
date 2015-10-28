@@ -5,7 +5,10 @@
  */
 package cityofheros;
 
+import View.WelcomeView;
 import model.Map;
+import model.Player;
+import View.MainMenu;
 
 /**
  *
@@ -18,11 +21,25 @@ public class CityofHeros {
      */
     public static void main(String[] args) {
         
+       //// Player player = new Player();
         
-        Map map = new Map();
-        map.initialize();
+  ///      WelcomeView welcomeView = new WelcomeView();
+     ///   welcomeView.displayBanner();
         
-        System.out.println(map.toString());
+     /// player.setName(welcomeView.getPlayerName());
+      
+     // welcomeView.displayPlayerNameBanner(player);
+        
+        MainMenu mainView = new MainMenu();
+        
+       char in = mainView.getInput();
+        
+        System.out.println("YOU ENTERED " + in);
+        
+       // Map map = new Map();
+     //   map.initialize();
+        
+      //  System.out.println(map.toString());
     }
     
 }
