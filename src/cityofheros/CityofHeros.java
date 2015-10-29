@@ -21,14 +21,14 @@ public class CityofHeros {
      */
     public static void main(String[] args) {
         
-       //// Player player = new Player();
+        Player player = new Player();
         
-  ///      WelcomeView welcomeView = new WelcomeView();
-     ///   welcomeView.displayBanner();
+      WelcomeView welcomeView = new WelcomeView();
+        welcomeView.displayBanner();
         
-     /// player.setName(welcomeView.getPlayerName());
+     player.setName(welcomeView.getPlayerName());
       
-     // welcomeView.displayPlayerNameBanner(player);
+     welcomeView.displayPlayerNameBanner(player);
         
         MainMenu mainView = new MainMenu();
         
@@ -36,10 +36,10 @@ public class CityofHeros {
         
         System.out.println("YOU ENTERED " + in);
         
-       // Map map = new Map();
-     //   map.initialize();
+       Map map = new Map();
+      map.initialize();
         
-      //  System.out.println(map.toString());
+       System.out.println(map.toString());
     }
     
 }

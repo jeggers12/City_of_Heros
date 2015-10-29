@@ -19,7 +19,7 @@ public class MainMenu {
     
     public void displayMenu() {
         
-        System.out.println("Please selction an option");
+        System.out.println("Please select one of these options");
         System.out.println("N - New Game");
         System.out.println("L - Load Game");
         System.out.println("H - Help Menu");
