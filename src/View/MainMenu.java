@@ -49,6 +49,9 @@ public class MainMenu {
                 System.out.println("Please select a valid input");
                 input = "";
             }
+            if(rtn == 'H') {
+                showHelp();
+            }
         }
        
         }
@@ -78,28 +81,39 @@ public class MainMenu {
     }
 
     private void startNewGame() {
-        System.out.println("NOT IPMLEMETED YET");
+        System.out.println("Under Construction");
         
     }
 
     private void LoadGame() {
-        System.out.println("NOT IMPLEMETED YET");
+        System.out.println("Under Construction");
         
     }
 
     private void showHelp() {
-        
+                
         System.out.println("**************************");
-        System.out.println("Welcom to the Help Menu");
+        System.out.println("Welcome to the Help Menu");
         System.out.println("**************************");
-        System.out.println("");
-        
+        System.out.println("How to play game:");
+        System.out.println("W - Forward");
+        System.out.println("A - Left");
+        System.out.println("D - Right");
+        System.out.println("S - Backwards");
+        System.out.println("Goal:");
+        System.out.println("Fight through the thugs and villans to reach the end");
+        System.out.println("Hit R to return to Menu");
+     
     }
 
     private void exitGame() {
-        System.out.println("NOT IMPLEMENTED YET");
+        System.out.println("Under Construction");
+        
+    }
+
+   
         
     }
     
     
-}
+

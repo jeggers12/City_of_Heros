@@ -10,6 +10,7 @@ import model.Map;
 import model.Player;
 import View.MainMenu;
 
+
 /**
  *
  * @author Josch
@@ -32,17 +33,18 @@ public class CityofHeros {
         
         MainMenu mainView = new MainMenu();
         
-       char in = mainView.getInput();
+      char in = mainView.getInput();
+       
+       System.out.println("YOU ENTERED " + in);
         
-        System.out.println("YOU ENTERED " + in);
         
-        char opt = mainView.doAction(input);
-        System.out.println(+ opt);
+       //  char opt = mainView.doAction(input);
+     //   System.out.println(+ opt);
         
-       Map map = new Map();
-      map.initialize();
+     //  Map map = new Map();
+    //  map.initialize();
         
-       System.out.println(map.toString());
+     //  System.out.println(map.toString());
     }
     
 }
