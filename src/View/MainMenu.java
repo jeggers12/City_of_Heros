@@ -89,6 +89,11 @@ public class MainMenu {
 
     private void showHelp() {
         
+        System.out.println("**************************");
+        System.out.println("Welcom to the Help Menu");
+        System.out.println("**************************");
+        System.out.println("");
+        
     }
 
     private void exitGame() {

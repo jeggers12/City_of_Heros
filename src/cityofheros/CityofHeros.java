@@ -36,6 +36,9 @@ public class CityofHeros {
         
         System.out.println("YOU ENTERED " + in);
         
+        char opt = mainView.doAction(input);
+        System.out.println(+ opt);
+        
        Map map = new Map();
       map.initialize();
         
