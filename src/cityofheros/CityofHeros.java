@@ -38,10 +38,10 @@ public class CityofHeros {
        System.out.println("YOU ENTERED " + in);
     
         
-      Map map = new Map();
-     map.initialize();
+   ///   Map map = new Map();
+  //   map.initialize();
         
-      System.out.println(map.toString());
+  //    System.out.println(map.toString());
     }
     
 }

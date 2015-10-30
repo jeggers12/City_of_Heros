@@ -6,14 +6,18 @@
 package View;
 
 import java.util.Scanner;
+import View.showHelp;
 
 /**
  *
  * @author Josch
  */
 public class MainMenu {
+  
     
-    public MainMenu() {
+    public MainMenu() { 
+        
+        
         
     }
     
@@ -29,7 +33,7 @@ public class MainMenu {
     }
     
     public char getInput(){
-    
+    showHelp Help = new showHelp();
         Scanner in = new Scanner(System.in);
         String input = "";
         char rtn =0;
@@ -50,7 +54,7 @@ public class MainMenu {
                 input = "";
             }
             if(rtn == 'H') {
-                showHelp();
+                Help.showHelp();
             }
             if(rtn == 'L' ) {
                 LoadGame();
@@ -100,23 +104,7 @@ public class MainMenu {
     }
 
     private void showHelp() {
-                
-        System.out.println("**************************");
-        System.out.println("Welcome to the Help Menu");
-        System.out.println("**************************");
-        System.out.println("How to play game:");
-        System.out.println("W - Forward");
-        System.out.println("A - Left");
-        System.out.println("D - Right");
-        System.out.println("S - Backwards");
-        System.out.println("******************************************************");
-        System.out.println("Goal:");
-        System.out.println("Fight through the thugs and villans to reach the end");
-        System.out.println("Watch out for the villian they will be more powerful");
-        System.out.println("then the thugs");
-        System.out.println("******************************************************");
-      
-     
+        
     }
 
     private void exitGame() {
