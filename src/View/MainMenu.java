@@ -52,6 +52,15 @@ public class MainMenu {
             if(rtn == 'H') {
                 showHelp();
             }
+            if(rtn == 'L' ) {
+                LoadGame();
+            }
+            if(rtn == 'N') {
+                startNewGame();
+            }
+            if(rtn == 'E') {
+                exitGame();
+            }
         }
        
         }
@@ -100,9 +109,13 @@ public class MainMenu {
         System.out.println("A - Left");
         System.out.println("D - Right");
         System.out.println("S - Backwards");
+        System.out.println("******************************************************");
         System.out.println("Goal:");
         System.out.println("Fight through the thugs and villans to reach the end");
-        System.out.println("Hit R to return to Menu");
+        System.out.println("Watch out for the villian they will be more powerful");
+        System.out.println("then the thugs");
+        System.out.println("******************************************************");
+      
      
     }
 
