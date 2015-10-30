@@ -22,10 +22,19 @@ public class Player implements Serializable {
     private String name;
     private int hitPoints;
     private List<Item> items;
+    private Location location;
 
     public Player() {
         
         items = new ArrayList<Item>();
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
     }
     
     

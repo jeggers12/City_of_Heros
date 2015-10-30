@@ -6,24 +6,46 @@
 package Control_Layer;
 
 import model.Location;
-import model.Item;
+import model.Map;
+import model.Player;
 
         
 /**
  *
- * @param c column
- * @param r row
+ * @param col column
+ * @param row row
  * @author KyleSchmitt
  */
 public class MovementController {
     
-    public void movePlayerToLocation(col c, row r){
+    public boolean movePlayerNorth(Map m, Player p){
         
+       Location currentLocation = p.getLocation();                
+       
+       if(currentLocation.getRow() == 0) {            
+           return false;        
+       }                
+       
+       Location newLocation = m.getMatrix()[currentLocation.getRow() - 1][currentLocation.getCol()];  
+       
+       p.setLocation(newLocation);
+       
+       return true;
+
+        //[0,0][0,1][0,2][0,3]        
+        //[1,0][1,1][1,2][1,3]
     }
     
-    public void pickUpItem(){
+    public boolean pickUpItem(Player p){
         
-        c.getItemPoints(c.setItemPoints)
+        Location currentLocation = p.getLocation();
+        
+        if(currentLocation.getItem() == null){
+            return false;
+        }
+        else{
+           currentLocation.getItem()
+        }
         
     }
     
