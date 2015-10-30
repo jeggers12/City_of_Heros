@@ -30,9 +30,9 @@ public class showHelp {
         System.out.println("S - Backwards");
         System.out.println("******************************************************");
         System.out.println("Goal:");
-        System.out.println("Fight through the thugs and villans to reach the end");
-        System.out.println("Watch out for the villian they will be more powerful");
-        System.out.println("then the thugs");
+        System.out.println("Fight your way through the city through the thugs and");
+        System.out.println("villans to reach the end Watch out for the villian");
+        System.out.println("they will be more powerful then the thugs");
         System.out.println("******************************************************");
         
         MainMenu mainView = new MainMenu();
