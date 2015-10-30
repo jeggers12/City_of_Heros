@@ -36,15 +36,12 @@ public class CityofHeros {
       char in = mainView.getInput();
        
        System.out.println("YOU ENTERED " + in);
+    
         
+      Map map = new Map();
+     map.initialize();
         
-       //  char opt = mainView.doAction(input);
-     //   System.out.println(+ opt);
-        
-     //  Map map = new Map();
-    //  map.initialize();
-        
-     //  System.out.println(map.toString());
+      System.out.println(map.toString());
     }
     
 }
