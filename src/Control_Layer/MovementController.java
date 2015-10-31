@@ -12,8 +12,8 @@ import model.Player;
         
 /**
  *
- * @param col column
- * @param row row
+ * @param p Player
+ * @param m Map
  * @author KyleSchmitt
  */
 public class MovementController {
@@ -36,15 +36,62 @@ public class MovementController {
         //[1,0][1,1][1,2][1,3]
     }
     
+    public boolean movePlayerSouth(Map m, Player p){
+        
+        Location currentLocation = p.getLocation();                
+       
+       if(currentLocation.getRow() == 0) {            
+           return false;        
+       }                
+       
+       Location newLocation = m.getMatrix()[currentLocation.getRow() + 1][currentLocation.getCol()];  
+       
+       p.setLocation(newLocation);
+       
+       return true;
+    }
+    
+    public boolean movePlayerEast(Map m, Player p){
+        
+        Location currentLocation = p.getLocation();                
+       
+       if(currentLocation.getRow() == 0) {            
+           return false;        
+       }                
+       
+       Location newLocation = m.getMatrix()[currentLocation.getCol() + 1][currentLocation.getRow()];  
+       
+       p.setLocation(newLocation);
+       
+       return true;
+    }
+    
+    public boolean movePlayerWest(Map m, Player p){
+        
+        Location currentLocation = p.getLocation();                
+       
+       if(currentLocation.getRow() == 0) {            
+           return false;        
+       }                
+       
+       Location newLocation = m.getMatrix()[currentLocation.getCol() - 1][currentLocation.getRow()];  
+       
+       p.setLocation(newLocation);
+       
+       return true;
+    }
+    
     public boolean pickUpItem(Player p){
         
         Location currentLocation = p.getLocation();
         
         if(currentLocation.getItem() == null){
             return false;
-        }
-        else{
-           currentLocation.getItem()
+        } else{
+           p.getItems().add(currentLocation.getItem());
+           currentLocation.setItem(null);
+           
+           return true;
         }
         
     }

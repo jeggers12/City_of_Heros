@@ -20,20 +20,11 @@ public class showHelp {
     
     
     public void showHelp() {
-        System.out.println("**************************");
-        System.out.println("Welcome to the Help Menu");
-        System.out.println("**************************");
-        System.out.println("How to play game:");
-        System.out.println("W - Forward");
-        System.out.println("A - Left");
-        System.out.println("D - Right");
-        System.out.println("S - Backwards");
-        System.out.println("******************************************************");
-        System.out.println("Goal:");
-        System.out.println("Fight your way through the city through the thugs and");
-        System.out.println("villans to reach the end Watch out for the villian");
-        System.out.println("they will be more powerful then the thugs");
-        System.out.println("******************************************************");
+        System.out.println("Please select one of these options");
+        System.out.println("G - Goals");
+        System.out.println("C - Controls");
+        System.out.println("B - How to Battle");
+        System.out.println("M - Back to Main Menu");
         
         MainMenu mainView = new MainMenu();
         
