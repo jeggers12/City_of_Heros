@@ -40,15 +40,19 @@ public class CityofHeros {
        
        showHelp Help = new showHelp();
        
+       if(in == 'H'){
+           
+       }
+       
        char opt = Help.opt();
        
        System.out.println("YOU ENTERED " + opt);
+       
+       
+       
     
         
-   ///   Map map = new Map();
-  //   map.initialize();
-        
-  //    System.out.println(map.toString());
+   
     }
     
 }

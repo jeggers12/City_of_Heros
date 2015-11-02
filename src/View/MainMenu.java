@@ -7,6 +7,7 @@ package View;
 
 import java.util.Scanner;
 import View.showHelp;
+import View.NewGame;
 
 /**
  *
@@ -34,6 +35,7 @@ public class MainMenu {
     
     public char getInput(){
     showHelp Help = new showHelp();
+      NewGame Game = new View.NewGame();
         Scanner in = new Scanner(System.in);
         String input = "";
         char rtn =0;
@@ -60,7 +62,7 @@ public class MainMenu {
                 LoadGame();
             }
             if(rtn == 'N') {
-                startNewGame();
+                  Game.NewGame();
             }
             if(rtn == 'E') {
                 exitGame();
@@ -94,7 +96,6 @@ public class MainMenu {
     }
 
     private void startNewGame() {
-        System.out.println("Under Construction");
         
     }
 
