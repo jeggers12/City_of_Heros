@@ -54,7 +54,7 @@ public class MainMenu {
                 input = "";
             }
             if(rtn == 'H') {
-                Help.showHelp();
+                Help.helpMenu();
             }
             if(rtn == 'L' ) {
                 LoadGame();

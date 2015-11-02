@@ -9,6 +9,7 @@ import View.WelcomeView;
 import model.Map;
 import model.Player;
 import View.MainMenu;
+import View.showHelp;
 
 
 /**
@@ -36,6 +37,12 @@ public class CityofHeros {
       char in = mainView.getInput();
        
        System.out.println("YOU ENTERED " + in);
+       
+       showHelp Help = new showHelp();
+       
+       char opt = Help.opt();
+       
+       System.out.println("YOU ENTERED " + opt);
     
         
    ///   Map map = new Map();
