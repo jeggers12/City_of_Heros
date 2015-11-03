@@ -23,12 +23,14 @@ public class showHelp {
     
     
     public void helpMenu() {
-        System.out.println("Please select one of these options");
+        System.out.println("*************************************");
+        System.out.println("Please select one of these options:");
+        System.out.println("*************************************");
         System.out.println("G - Goals");
         System.out.println("C - Controls");
         System.out.println("B - How to Battle");
         System.out.println("M - Back to Main Menu");
-        
+        System.out.println("************************");
     }
     public char opt() {
         
@@ -104,21 +106,25 @@ public class showHelp {
 
     private void Goals() {
         
+       
+        System.out.println("*****************************************************************");
         System.out.println("The goal of this game is to fight your way throught the city.");
         System.out.println("Along the way you will find heros to help you along the way.");
         System.out.println("However you will also find villans and thugs that will try to");
         System.out.println("stop you from reaching the end of the city. You are our only hope");
         System.out.println("hero now get out there and fight till the end");
+        System.out.println("*****************************************************************");
         
     }
 
+
     private void Controls() {
-        
+        System.out.println("*****************************************************************");
         System.out.println("W - Forward");
         System.out.println("A - Left");
         System.out.println("D - Right");
         System.out.println("S - Backwards");
-        
+        System.out.println("*****************************************************************");
     }
 
     private void Battle() {

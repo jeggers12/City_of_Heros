@@ -35,6 +35,7 @@ public class MainMenu {
     
     public char getInput(){
     showHelp Help = new showHelp();
+     Exit goodbye = new Exit();
       NewGame Game = new View.NewGame();
         Scanner in = new Scanner(System.in);
         String input = "";
@@ -65,7 +66,7 @@ public class MainMenu {
                   Game.NewGame();
             }
             if(rtn == 'E') {
-                exitGame();
+                goodbye.Exit();
             }
         }
        

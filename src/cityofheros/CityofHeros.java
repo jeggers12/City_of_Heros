@@ -5,6 +5,7 @@
  */
 package cityofheros;
 
+import View.Exit;
 import View.WelcomeView;
 import model.Map;
 import model.Player;
@@ -42,17 +43,35 @@ public class CityofHeros {
        
        if(in == 'H'){
            
-       }
        
-       char opt = Help.opt();
+         char opt = Help.opt();
        
        System.out.println("YOU ENTERED " + opt);
        
+       if(opt == 'G'|| opt == 'C' || opt == 'B'){
+          
+        Help.opt();
+       }
        
-       
-    
-        
+        Exit goodbye = new Exit();
+      
+           if(in == 'E'){
+               char exit = goodbye.Exit();
+               if(exit ==  'Y') {
+           System.out.println("Come back soon hero there is much work to do");
+           
+       } else {
+           mainView.getInput();
+           
+       }
+               
+           }
    
+      
+           
+       }
+      
     }
-    
-}
+    }
+
+
