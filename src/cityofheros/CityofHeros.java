@@ -56,12 +56,9 @@ public class CityofHeros {
         Exit goodbye = new Exit();
       
            if(in == 'E'){
-               char exit = goodbye.Exit();
-               if(exit ==  'Y') {
-           System.out.println("Come back soon hero there is much work to do");
-           
-       } else {
-           mainView.getInput();
+               char exit = goodbye.nomore();
+               System.out.println("You Entered " + exit);
+               
            
        }
                
@@ -72,6 +69,6 @@ public class CityofHeros {
        }
       
     }
-    }
+    
 
 

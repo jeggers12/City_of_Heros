@@ -66,7 +66,7 @@ public class MainMenu {
                   Game.NewGame();
             }
             if(rtn == 'E') {
-                goodbye.Exit();
+                goodbye.nomore();
             }
         }
        
