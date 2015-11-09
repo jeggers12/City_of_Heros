@@ -21,11 +21,12 @@ public class WelcomeView {
     public void displayBanner() {
         
         System.out.println("*************************************");
-        System.out.println("Welcome hero your city is under attack by thugs");
-        System.out.println("You as a hero must clean up this filfy town");
-        System.out.println("As you go through the game you will find heros to help you");
-        System.out.println("However every hero need a villan");
-        System.out.println("I wish you the best of luck and your city thanks you hero");
+        System.out.println("Welcome hero your city is under attack by thugs,");
+        System.out.println("you as a hero must clean up this filfy town.");
+        System.out.println("As you go through the game you will find heros");
+        System.out.println("to help you. However every hero need a villan");
+        System.out.println("I wish you the best of luck and your city");
+        System.out.println("thanks you hero.");
         System.out.println("**************************************");
     
     }
