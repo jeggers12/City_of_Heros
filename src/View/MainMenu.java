@@ -36,8 +36,8 @@ public class MainMenu extends View {
                     showHelp();
                     break;
                 case 'E' :
-                    return false;
-                    
+                    exit();
+                    break;
                 
                 default:
                     System.out.println("ERROR ON INPUT");
@@ -63,6 +63,11 @@ public class MainMenu extends View {
         showHelp h = new showHelp();
         h.display();
         
+    }
+
+    private void exit() {
+        Exit e = new Exit();
+        e.display();
     }
 
     

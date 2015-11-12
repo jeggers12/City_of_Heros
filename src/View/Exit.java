@@ -11,77 +11,38 @@ import java.util.Scanner;
  *
  * @author Josch
  */
-public class Exit {
+public class Exit extends View{
     
     public Exit() {
         
-    }
-    
-    public void goodbye(){
-        System.out.println("Are you sure you want to leave the game");
-        System.out.println("Please select Y/N: ");
-    }
-
-    public char nomore() {
-        
-        Scanner in = new Scanner(System.in);
-    char rtn = 0;
-    String opt = "";
-    
-    
-    while(opt.length() < 1) {
-            goodbye();
-            opt = in.nextLine();
-            
-            if(opt.length() < 1) {
-                System.out.println("Please select Y/N");
-                goodbye();
-            } else {
-            
-            rtn = opt.toUpperCase().charAt(0);
-    
-    if(rtn != 'Y' && rtn != 'N') {
-                System.out.println("Please select a valid input");
-                opt = "";
-    }
-          
-         if (rtn == 'Y') {
-                    yes();
-                    
-                }
-                
-                if (rtn == 'N') {
-                    
-                    no();
-                }
-                
-    }
-            }
-    
-            return rtn;
+        super("Are you sure you want to leave the game\n"
+                + "Y- Yes\n"
+                + "N- No\n");
         
     }
     
-    
+  
 
     
-    public void doAction(char opt) {
+    public boolean doAction(char input) {
         
-        switch(opt) {
+        switch(input) {
             case 'Y' :
                 yes();
                 break;
                 case'N' :
-                    no();
-                    break;
+                    return false;
+                    
     
         }
+        return true;
     
 }
 
     private void yes() {
         
         System.out.println("Come back soon hero there is much work to do");
+       System.exit(0);
         
     }
 
