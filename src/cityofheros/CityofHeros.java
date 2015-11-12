@@ -24,21 +24,21 @@ public class CityofHeros {
      */
     public static void main(String[] args) {
         
-        //Player player = new Player();
+        Player player = new Player();
         
-     // WelcomeView welcomeView = new WelcomeView();
-       // welcomeView.displayBanner();
+     WelcomeView welcomeView = new WelcomeView();
+        welcomeView.displayBanner();
         
-    // player.setName(welcomeView.getPlayerName());
+    player.setName(welcomeView.getPlayerName());
       
-     // welcomeView.displayPlayerNameBanner(player);
+     welcomeView.displayPlayerNameBanner(player);
         
         MainMenu mainView = new MainMenu();
         mainView.display();
         
-      //char in = mainView.getInput();
+     // char in = mainView.getInput();
        
-       //System.out.println("YOU ENTERED " + in);
+      // System.out.println("YOU ENTERED " + in);
        
       // showHelp Help = new showHelp();
        
