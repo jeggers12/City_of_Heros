@@ -5,78 +5,26 @@
  */
 package View;
 
-import java.util.Scanner;
-import View.showHelp;
-import View.NewGame;
+
 
 /**
  *
  * @author Josch
  */
-public class MainMenu {
+public class MainMenu extends View {
   
     
     public MainMenu() { 
-        
-        
-        
-    }
-    
-    public void displayMenu() {
-        
-        System.out.println("Please select one of these options");
-        System.out.println("N - New Game");
-        System.out.println("L - Load Game");
-        System.out.println("H - Help Menu");
-        System.out.println("E - Exit Game");
-        
-        
-    }
-    
-    public char getInput(){
-    showHelp Help = new showHelp();
-     Exit goodbye = new Exit();
-      NewGame Game = new View.NewGame();
-        Scanner in = new Scanner(System.in);
-        String input = "";
-        char rtn =0;
-        
-        while(input.length() < 1) {
-            displayMenu();
-            input = in.nextLine();
-            
-            if(input.length() < 1) {
-                System.out.println("Please select an option");
-                displayMenu();
-            } else {
-            
-            rtn = input.toUpperCase().charAt(0);
-            
-            if(rtn != 'N' && rtn != 'L' && rtn != 'H' && rtn != 'E') {
-                System.out.println("Please select a valid input");
-                input = "";
-            }
-            if(rtn == 'H') {
-                Help.helpMenu();
-            }
-            if(rtn == 'L' ) {
-                LoadGame();
-            }
-            if(rtn == 'N') {
-                  Game.NewGame();
-            }
-            if(rtn == 'E') {
-                goodbye.nomore();
-            }
-        }
        
-        }
-         return rtn;
-    }
-        
-      
-    public void doAction(char input) {
-        
+        super ("Please Select an option:\n" 
+              + "N - New Game\n" 
+              + "L - Load Game\n"
+              + "H - Help Menu\n"
+              + "E - Exit Game\n");
+           }
+     
+    @Override
+    public boolean doAction(char input) {
         switch(input) {
             case 'N' :
                 startNewGame();
@@ -88,15 +36,21 @@ public class MainMenu {
                     showHelp();
                     break;
                 case 'E' :
-                    exitGame();
-                    break;
+                    return false;
+                    
+                
                 default:
                     System.out.println("ERROR ON INPUT");
+                    break;
         }
+        
+        return true;
         
     }
 
     private void startNewGame() {
+        NewGame g = new NewGame();
+        g.display();
         
     }
 
@@ -106,14 +60,12 @@ public class MainMenu {
     }
 
     private void showHelp() {
+        showHelp h = new showHelp();
+        h.display();
         
     }
 
-    private void exitGame() {
-        System.out.println("Under Construction");
-        
-    }
-
+    
    
         
     }

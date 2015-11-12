@@ -24,40 +24,46 @@ public class CityofHeros {
      */
     public static void main(String[] args) {
         
-        Player player = new Player();
+        //Player player = new Player();
         
-      WelcomeView welcomeView = new WelcomeView();
-        welcomeView.displayBanner();
+     // WelcomeView welcomeView = new WelcomeView();
+       // welcomeView.displayBanner();
         
-     player.setName(welcomeView.getPlayerName());
+    // player.setName(welcomeView.getPlayerName());
       
-     welcomeView.displayPlayerNameBanner(player);
+     // welcomeView.displayPlayerNameBanner(player);
         
         MainMenu mainView = new MainMenu();
+        mainView.display();
         
-      char in = mainView.getInput();
+      //char in = mainView.getInput();
        
-       System.out.println("YOU ENTERED " + in);
+       //System.out.println("YOU ENTERED " + in);
        
-       showHelp Help = new showHelp();
+      // showHelp Help = new showHelp();
        
-       if(in == 'H'){
+      //* if(in == 'H'){
            
        
-         char opt = Help.opt();
+   //      char opt = Help.opt();
        
-       System.out.println("YOU ENTERED " + opt);
+     //  System.out.println("YOU ENTERED " + opt);
        
-       if(opt == 'G'|| opt == 'C' || opt == 'B'){
+       //if(opt == 'G'|| opt == 'C' || opt == 'B'){
           
-        Help.opt();
-       }
+        //Help.opt();
+       //}
        
-        Exit goodbye = new Exit();
+        //Exit goodbye = new Exit();
       
-           if(in == 'E'){
-               char exit = goodbye.nomore();
-               System.out.println("You Entered " + exit);
+          // if(in == 'E'){
+            //   char exit = goodbye.nomore();
+              // System.out.println("You Entered " + exit);
+        
+        //  Map map = new Map();
+   //  map.initialize();
+        
+     //System.out.println(map.toString());
                
            
        }
@@ -66,9 +72,9 @@ public class CityofHeros {
    
       
            
-       }
+       
       
-    }
+    
     
 
 

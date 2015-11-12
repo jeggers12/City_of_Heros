@@ -5,87 +5,24 @@
  */
 package View;
 
-import java.util.Scanner;
-import View.MainMenu;
-
 /**
  *
  * @author Josch
  */
-public class showHelp {
+public class showHelp extends View {
 
     public showHelp() {
-    }
-    
-
-    
-    
-    
-    
-    public void helpMenu() {
-        System.out.println("*************************************");
-        System.out.println("Please select one of these options:");
-        System.out.println("*************************************");
-        System.out.println("G - Goals");
-        System.out.println("C - Controls");
-        System.out.println("B - How to Battle");
-        System.out.println("M - Back to Main Menu");
-        System.out.println("************************");
-    }
-    public char opt() {
         
-     Scanner in = new Scanner(System.in);
-    char rtn = 0;
-    String opt = "";
-     MainMenu mainView = new MainMenu();
-    
-    while(opt.length() < 1) {
-            helpMenu();
-            opt = in.nextLine();
-            
-            if(opt.length() < 1) {
-                System.out.println("Please select an option");
-                helpMenu();
-            } else {
-            
-            rtn = opt.toUpperCase().charAt(0);
-    
-    if(rtn != 'G' && rtn != 'C' && rtn != 'B' && rtn != 'M') {
-                System.out.println("Please select a valid input");
-                opt = "";
+        super("Please select one of these options:\n"
+                + "G - Goals\n"
+                + "C - Controls\n"
+                + "B - How to Battle\n"
+                + "M - Back to Main Menu\n");
     }
-                
-                if(rtn == 'G') {
-                    Goals();
-                    
-                }
-                
-                if(rtn == 'C') {
-                    Controls();
-                    
-                }
-                
-                if (rtn == 'B') {
-                    Battle();
-                    
-                }
-                
-                if (rtn == 'M') {
-                    
-                    mainView.getInput();
-                }
-                
-    }
-            }
     
-            return rtn;
+   public boolean doAction(char input) {
         
-    }
-    
-
-   public void doAction(char opt) {
-        
-        switch(opt) {
+        switch(input) {
             case 'G' :
                 Goals();
                 break;
@@ -96,12 +33,13 @@ public class showHelp {
                     Battle();
                     break;
                 case 'M' :
-                    MainMenu();
-                    break;
+                    return false;
+                   
                 default:
                     System.out.println("ERROR ON INPUT");
+                    break;
         }
-        
+        return true;
     }
 
     private void Goals() {
@@ -133,9 +71,7 @@ public class showHelp {
        
     }
 
-    private void MainMenu() {
-        
-    }
+    
 }
    
            
