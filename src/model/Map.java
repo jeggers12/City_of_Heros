@@ -95,5 +95,16 @@ public class Map implements Serializable {
         
     }
     
+    public static void main(String args[]) {
+        
+        Map L = new Map();
+        
+        Map[] plusOneLife = new Map[1];
+        
+        for (int i = 0; i < plusOneLife.length; i++){
+            plusOneLife[i] = new Map();
+        }
+    }
+    
     
 }
