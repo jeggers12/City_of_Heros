@@ -21,6 +21,19 @@ public class Item implements Serializable {
 
     public Item() {
         
+        Weapon equipWeapon = Weapon.valueOf(name);
+        
+        if(equipWeapon == Weapon.BATARANG){
+            System.out.println("I picked up a Batarang!");
+        }
+        
+        if(equipWeapon == Weapon.WHIP){
+            System.out.println("I picked up a Whip!");
+        }
+        
+        if(equipWeapon == Weapon.GLOVE){
+            System.out.println("I picked up a Glove!");
+        }
     }
     
     public String getName() {
@@ -37,6 +50,24 @@ public class Item implements Serializable {
 
     public void sethitPoints(int hitPoints) {
         this.hitPoints = hitPoints;
+    }
+    
+    
+public static enum Weapon {
+        WHIP("Whip"),
+        BATARANG("Batarang"),
+        GLOVE("Glove"),;
+        
+        private final String name;
+        
+        Weapon (String fn) {
+            this.name = fn;
+        }
+        
+        public String getName () {
+            return this.name;
+        }
+        
     }
     
 public boolean isHealth() {
@@ -84,6 +115,8 @@ public boolean isHealth() {
 
    
 }
+
+
     
         
     
