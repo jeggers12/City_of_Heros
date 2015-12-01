@@ -17,6 +17,10 @@ import model.Player;
  * @author KyleSchmitt
  */
 public class MovementController {
+
+    public MovementController() {
+    }
+    
     
     public boolean movePlayerNorth(Map m, Player p){
         

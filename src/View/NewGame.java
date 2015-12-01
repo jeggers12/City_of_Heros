@@ -5,6 +5,9 @@
  */
 package View;
 
+import Control_Layer.MovementController;
+import Exceptions.MapControlException;
+
 
 
 /**
@@ -53,7 +56,8 @@ public class NewGame extends View {
 
 
     private void moveForward() {
-        System.out.println("Under Construction");
+        MovementController l = new MovementController();
+        l.movePlayerNorth(null, null);
     }
 
     private void moveLeft() {
