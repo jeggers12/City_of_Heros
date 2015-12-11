@@ -22,11 +22,12 @@ public class Player implements Serializable {
     private String name;
     private int hitPoints;
     private List<Item> items;
+    private List<Hero> heroes;
     private Location location;
 
     public Player() {
-        
         items = new ArrayList<Item>();
+        heroes = new ArrayList<>();
     }
 
     public Location getLocation() {
@@ -37,7 +38,9 @@ public class Player implements Serializable {
         this.location = location;
     }
     
-    
+    public void addItemToInventory(Item i) {
+        this.items.add(i);
+    }
 
     public String getName() {
         return name;
