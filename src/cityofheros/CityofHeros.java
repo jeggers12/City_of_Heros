@@ -5,12 +5,10 @@
  */
 package cityofheros;
 
-import View.Exit;
 import View.WelcomeView;
-import model.Map;
 import model.Player;
 import View.MainMenu;
-import View.showHelp;
+import java.io.PrintWriter;
 
 /**
  *
@@ -18,6 +16,9 @@ import View.showHelp;
  */
 public class CityofHeros {
 
+    
+    public static PrintWriter output = new PrintWriter(System.out, true);
+    
     /**
      * @param args the command line arguments
      */

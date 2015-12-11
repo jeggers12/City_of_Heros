@@ -5,6 +5,7 @@
  */
 package View;
 
+import cityofheros.CityofHeros;
 import java.util.Scanner;
 
 /**
@@ -12,27 +13,27 @@ import java.util.Scanner;
  * @author Josch
  */
 public abstract class View implements ViewInterface {
-    
+
     private String menu;
-    
+
     public View(String menuString) {
-        
+
         menu = menuString;
-        
-        
+
     }
-    
+
     @Override
     public void display() {
         boolean cont;
-        
+
         do {
-        System.out.println(menu);
-        char in = getInput();
-        
-        cont = doAction(in);
-    } while(cont);
-}
+            CityofHeros.output.println(menu);
+            char in = getInput();
+
+            cont = doAction(in);
+        } while (cont);
+    }
+
     @Override
     public char getInput() {
         Scanner in = new Scanner(System.in);
@@ -52,5 +53,5 @@ public abstract class View implements ViewInterface {
 
         return rtn;
     }
-    
+
 }
