@@ -7,6 +7,7 @@ package Control_Layer;
 
 import model.Player;
 import model.Thug;
+import cityofheros.CityofHeros;
 
 /**
  * @param p The Player
@@ -15,6 +16,13 @@ import model.Thug;
  * @author Josch
  */
 public class Battle_Royale {
+
+    public Battle_Royale() {
+        CityofHeros.output.println("Please select one of these options:\n"
+                + "A - Attack\n"
+                + "R - Run\n");
+    }
+    
     
     public boolean attackThug(Player p, Thug a) {
         
@@ -48,5 +56,7 @@ public class Battle_Royale {
         
         
     }
+
     
 }
+

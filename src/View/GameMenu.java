@@ -13,6 +13,8 @@ import model.Location;
 import model.Map;
 import model.Player;
 import cityofheros.CityofHeros;
+import Control_Layer.Battle_Royale;
+import model.Thug;
 
 /**
  *
@@ -22,10 +24,11 @@ public class GameMenu extends View {
 
     public GameMenu() {
         super("Please select an option:\n"
-                + "W - Forward\n"
+                + "W - Up\n"
+                + "S - Down\n"
                 + "A - Leftt\n"
                 + "D - Right\n"
-                + "S - Backwards\n"
+                + "F - Fight Thug\n"
                 + "V - View Map\n"
                 + "L - View current location\n"
                 + "M - Main Menu");
@@ -46,6 +49,9 @@ public class GameMenu extends View {
             case 'S':
                 moveBackwards();
                 break;
+               // case 'F':
+                //Battle();
+                //break;
             case 'V':
                 viewMap();
                 break;
@@ -149,4 +155,16 @@ public class GameMenu extends View {
             CityofHeros.output.println("There is nothing here to pick up");
         }
     }
+
+  ///  private void Battle() {
+       
+     //   Player p = Game.getInstance().getPlayer();
+       // Location l = p.getLocation();
+        
+         //MovementController b = new MovementController();
+         
+        // Thug beginBattle = b.beginBattle(p, l);
+         
+        
+    //}
 }

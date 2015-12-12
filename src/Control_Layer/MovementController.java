@@ -9,6 +9,7 @@ import model.Item;
 import model.Location;
 import model.Map;
 import model.Player;
+import model.Thug;
 
 /**
  *
@@ -112,7 +113,18 @@ public class MovementController {
     }
     
 
-    public void beginBattle() {
+    public  Thug beginBattle(Player p, Location l) {
+        
+        if(l.hasthug()) {
+            
+            Thug t = l.getThug();
+            p.applyDamage(9);
+            l.setThug(null);
+            
+            return t;
+        } else {
+            return null;
+        }
 
     }
 
