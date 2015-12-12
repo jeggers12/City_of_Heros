@@ -44,7 +44,7 @@ public class Battle_RoyaleTest {
      */
     @Test
     public void testAttackThug() {
-        System.out.println("attackThug");
+        CityofHeros.output.println("attackThug");
         Player p = new Player();
         Thug a = new Thug();
         a.setHitPoints(100);
@@ -61,7 +61,7 @@ public class Battle_RoyaleTest {
      */
     @Test
     public void testAttackPlayer() {
-        System.out.println("attackPlayer");
+        CityofHeros.output.println("attackPlayer");
         Player p = new Player();
         Thug a = new Thug();
         p.setHitPoints(30);

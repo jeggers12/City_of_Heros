@@ -7,7 +7,7 @@ package View;
 
 import java.util.Scanner;
 import model.Player;
-
+import cityofheros.CityofHeros;
 /**
  *
  * @author Josch
@@ -20,14 +20,14 @@ public class WelcomeView {
     
     public void displayBanner() {
         
-        System.out.println("*************************************");
-        System.out.println("Welcome hero your city is under attack by thugs,");
-        System.out.println("you as a hero must clean up this filfy town.");
-        System.out.println("As you go through the game you will find heros");
-        System.out.println("to help you. However every hero need a villan");
-        System.out.println("I wish you the best of luck and your city");
-        System.out.println("thanks you hero.");
-        System.out.println("**************************************");
+        CityofHeros.output.println("*************************************");
+        CityofHeros.output.println("Welcome hero your city is under attack by thugs,");
+        CityofHeros.output.println("you as a hero must clean up this filfy town.");
+        CityofHeros.output.println("As you go through the game you will find heros");
+        CityofHeros.output.println("to help you. However every hero need a villan");
+        CityofHeros.output.println("I wish you the best of luck and your city");
+        CityofHeros.output.println("thanks you hero.");
+        CityofHeros.output.println("**************************************");
     
     }
     
@@ -37,12 +37,12 @@ public class WelcomeView {
         String name  = "";
         
         while(name.length() < 2) {
-           System.out.println("Please enter your name hero:");
+           CityofHeros.output.println("Please enter your name hero:");
              name = in.nextLine();
          
              if (name.length() < 2) {
                  
-                 System.out.println("Please enter naem with at least 2 characters");
+                 CityofHeros.output.println("Please enter naem with at least 2 characters");
              }
              
         }
@@ -51,10 +51,10 @@ public class WelcomeView {
     
     public void displayPlayerNameBanner(Player p) {
         
-        System.out.println("*****************************");
-        System.out.println("Welcome Hero " + p.getName() + "!");
-        System.out.println("Please Help our City");
-        System.out.println("******************************");
+        CityofHeros.output.println("*****************************");
+        CityofHeros.output.println("Welcome Hero " + p.getName() + "!");
+        CityofHeros.output.println("Please Help our City");
+        CityofHeros.output.println("******************************");
     
     }
     

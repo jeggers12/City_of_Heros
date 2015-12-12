@@ -22,7 +22,7 @@ public class MovementControllerTest {
      */
     @Test
     public void testMovePlayerToLocation() {
-        System.out.println("movePlayerToLocation");
+        CityofHeros.output.println("movePlayerToLocation");
         int col = 0;
         int row = 0;
         MovementController instance = new MovementController();
@@ -36,7 +36,7 @@ public class MovementControllerTest {
      */
     @Test
     public void testPickUpItem() {
-        System.out.println("pickUpItem");
+        CityofHeros.output.println("pickUpItem");
         MovementController instance = new MovementController();
         instance.pickUpItem();
         // TODO review the generated test code and remove the default call to fail.
@@ -48,7 +48,7 @@ public class MovementControllerTest {
      */
     @Test
     public void testBeginBattle() {
-        System.out.println("beginBattle");
+        CityofHeros.output.println("beginBattle");
         MovementController instance = new MovementController();
         instance.beginBattle();
         // TODO review the generated test code and remove the default call to fail.

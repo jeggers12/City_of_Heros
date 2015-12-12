@@ -6,6 +6,7 @@
 package View;
 
 import Control_Layer.GameController;
+import cityofheros.CityofHeros;
 
 /**
  *
@@ -39,7 +40,7 @@ public class MainMenu extends View {
                 break;
 
             default:
-                System.out.println("ERROR ON INPUT");
+                CityofHeros.output.println("ERROR ON INPUT");
                 break;
         }
 
@@ -55,7 +56,7 @@ public class MainMenu extends View {
     }
 
     private void LoadGame() {
-        System.out.println("Under Construction");
+        CityofHeros.output.println("Under Construction");
 
     }
 

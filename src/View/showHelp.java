@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package View;
-
+import cityofheros.CityofHeros;
 /**
  *
  * @author Josch
@@ -36,7 +36,7 @@ public class showHelp extends View {
                     return false;
                    
                 default:
-                    System.out.println("ERROR ON INPUT");
+                    CityofHeros.output.println("ERROR ON INPUT");
                     break;
         }
         return true;
@@ -45,29 +45,29 @@ public class showHelp extends View {
     private void Goals() {
         
        
-        System.out.println("*****************************************************************");
-        System.out.println("The goal of this game is to fight your way throught the city.");
-        System.out.println("Along the way you will find heros to help you along the way.");
-        System.out.println("However you will also find villans and thugs that will try to");
-        System.out.println("stop you from reaching the end of the city. You are our only hope");
-        System.out.println("hero now get out there and fight till the end");
-        System.out.println("*****************************************************************");
+        CityofHeros.output.println("*****************************************************************");
+        CityofHeros.output.println("The goal of this game is to fight your way throught the city.");
+        CityofHeros.output.println("Along the way you will find heros to help you along the way.");
+        CityofHeros.output.println("However you will also find villans and thugs that will try to");
+        CityofHeros.output.println("stop you from reaching the end of the city. You are our only hope");
+        CityofHeros.output.println("hero now get out there and fight till the end");
+        CityofHeros.output.println("*****************************************************************");
         
     }
 
 
     private void Controls() {
-        System.out.println("*****************************************************************");
-        System.out.println("W - Forward");
-        System.out.println("A - Left");
-        System.out.println("D - Right");
-        System.out.println("S - Backwards");
-        System.out.println("*****************************************************************");
+        CityofHeros.output.println("*****************************************************************");
+        CityofHeros.output.println("W - Forward");
+        CityofHeros.output.println("A - Left");
+        CityofHeros.output.println("D - Right");
+        CityofHeros.output.println("S - Backwards");
+        CityofHeros.output.println("*****************************************************************");
     }
 
     private void Battle() {
         
-        System.out.println("Under construction");
+        CityofHeros.output.println("Under construction");
        
     }
 

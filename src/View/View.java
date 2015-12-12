@@ -45,7 +45,7 @@ public abstract class View implements ViewInterface {
             input = in.nextLine();
 
             if (input.length() < 1) {
-                System.out.println("Please select an option");
+                CityofHeros.output.println("Please select an option");
             } else {
                 rtn = input.toUpperCase().charAt(0);
             }

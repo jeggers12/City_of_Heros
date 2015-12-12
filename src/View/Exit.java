@@ -6,6 +6,7 @@
 package View;
 
 import java.util.Scanner;
+import cityofheros.CityofHeros;
 
 /**
  *
@@ -41,7 +42,7 @@ public class Exit extends View{
 
     private void yes() {
         
-        System.out.println("Come back soon hero there is much work to do");
+        CityofHeros.output.println("Come back soon hero there is much work to do");
        System.exit(0);
         
     }

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package View;
-
+import cityofheros.CityofHeros;
 
 
 /**
@@ -37,7 +37,7 @@ public class Battle extends View {
             case 'R':
                 return run();
             default:
-                System.out.println("Please select a valid input.");
+                CityofHeros.output.println("Please select a valid input.");
                 break;
         }
 
@@ -46,12 +46,12 @@ public class Battle extends View {
     }
 
     private boolean attack() {
-        System.out.println("Under Construtction");
+        CityofHeros.output.println("Under Construtction");
         return false;
     }
 
     private boolean attackWithItem() {
-        System.out.println("Under Construtction");
+        CityofHeros.output.println("Under Construtction");
         return false;
     }
 
